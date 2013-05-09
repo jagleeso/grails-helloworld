@@ -25,7 +25,7 @@
 			
 				<g:if test="${userInstance?.favouriteNumber}">
 				<li class="fieldcontain">
-					<span id="favouriteNumber-label" class="property-label"><g:message code="user.favouriteNumber.label" default="Favourite Number" /></span>
+					<span id="favouriteNumber-label" class="property-label">${userInstance?.username}'s favourite number is:</span>
 					
 						<span class="property-value" aria-labelledby="favouriteNumber-label"><g:fieldValue bean="${userInstance}" field="favouriteNumber"/></span>
 					
