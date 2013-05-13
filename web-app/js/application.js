@@ -72,3 +72,27 @@ function assert(got, expect) {
     }
 }
 
+/* Task solutions:
+ */
+
+// a. implement map
+function map(f, A) {
+    var B = new Array(A.length);
+    for (var i = 0; i < A.length; i++) {
+        B[i] = f(A[i]);
+    }
+    return B;
+}
+
+// map tests
+console.log("map tests");
+assert(
+    map(function (x) { return Math.pow(2, x) }, [1, 2, 3, 4]),
+    [2, 4, 8, 16]);
+assert(
+    map(function (x) { return Math.pow(2, x) }, []),
+    []);
+assert(
+    map(function (x) { return [x] }, [1, 2, 3, 4]),
+    [[1], [2], [3], [4]]);
+
